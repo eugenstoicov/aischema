@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ai-db-generator-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: PORT
+        value: 3000
